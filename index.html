@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.ne/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <section class="main">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 col-md-12  align-items-center">
+                    <div class="text text-center">
+                        <h1 class="text-grey">Solicitud de Pasaporte</h1>
+                    </div>
+                    <div id="resultado">                        
+                    </div>
+                </div>                
+                <div class="col-lg-5 col-md-10 col-sm-12 ">
+                    <div class="form-box px-5 py-4">
+                        <form>
+                            <h2>Formulario de Solicitud de Pasaporte</h2><br>
+                            <input type="text" id="nombre" name="" placeholder="Nombre completo"
+                                class="form-control mb-3">
+                            <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+                            <input type="date" id="fecha_nacimiento" name="" class="form-control mb-3">
+                            <input type="text" id="nacionalidad" name="" placeholder="Nacionalidad"
+                                class="form-control mb-3">
+                            <select name="" class="form-select mb-3" id="genero">
+                                <option value="">Masculino</option>
+                                <option value="">Femenino</option>
+                            </select>
+                            <input type="email" id="correo" name="" placeholder="Email" class="form-control mb-3">
+                            <textarea id="direccion" name="" placeholder="Direccion Completa"
+                                class="form-control mb-3"></textarea>
+                            <label for="foto">Subir foto:</label><br>
+                            <input type="file" id="foto" name="foto" accept="image/*" class="form-control mb-3">
+                            <div class="mb-3">
+                                <input type="checkbox" name="">
+                                <label><small>
+                                        Para finalizar la solicitud debe aceptar <a
+                                            href=""><b>Terminos y Condiciones</b></a></small></label>
+                            </div>
+                            <button class="register-btn form-control">Enviar Solicitud</button>
+                            <p class="warnings" id="warnings"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="validacion.js">
+
+            function mostrarResultado() {
+            var nombre = document.getElementById("nombre").value;
+            var fechaNacimiento = document.getElementById("fecha_nacimiento").value;
+            var nacionalidad = document.getElementById("nacionalidad").value;
+            var genero = document.getElementById("genero").checked;
+            var correo = document.getElementById("correo").value;
+            var direccion = document.getElementById("direccion").value;
+            var foto = document.getElementById("foto").value;
+
+
+
+            // Construir el contenido HTML para mostrar los resultados
+            var resultadoHTML = `
+                <h2>Resultados:</h2>
+                <p><strong>Nombre:</strong> ${nombre}</p>
+                <p><strong>Fecha de nacimiento:</strong> ${fechaNacimiento}</p>
+                <p><strong>Nacionalidad:</strong> ${nacionalidad}</p>
+                <p><strong>Género:</strong> ${genero}</p>
+                <p><strong>Correo electrónico:</strong> ${correo}</p>
+                <p><strong>Dirección:</strong> ${direccion}</p>
+                <p><strong>Foto:</strong> ${foto}</p>
+            `;
+
+            // Mostrar los resultados en el div con id "resultado"
+            document.getElementById("resultado").innerHTML = resultadoHTML;
+        }
+    </script>
+
+
+</body>
+
+</html>

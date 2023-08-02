@@ -1,0 +1,51 @@
+.main{
+    background-image: url("passport.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 75px 0px;
+}
+
+.form-box{
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(30px);
+    border-radius: 20px;
+    border: 1px solid white;
+}
+
+.form-box input{
+    border-radius: 10px;
+}
+
+.form-box input:focus{
+    box-shadow: 0 0 0;
+    border: 1px solid  #2e86c1 ;
+}
+
+.form-box select{
+    border-radius: 10px;
+}
+
+.form-box select:focus{
+    box-shadow: 0 0 0;
+    border: 1px solid  #2e86c1 ;
+}
+
+.register-btn{
+    background-image: linear-gradient(to right,   #1f618d  ,   #3498db ,   #95a5a6  );
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+
+.text h1{
+    font-size: 60px;
+}
+
+.warnings{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: #B06AB3;
+    padding-top: 20px;
+}
